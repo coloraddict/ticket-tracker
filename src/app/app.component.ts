@@ -139,12 +139,16 @@ export class AppComponent implements OnInit {
         })
     }
 
-    updateView(){
-        const query = this.pickSelectedFilterCriterias(this.filterCriteria);       
-        this.filteredList = [];
-        this.filteredList = this.groupByStatus(this.tickets, query);
-        this.updateUserIcon();  
-        this.getCountByGroup();    
+    updateView(){        
+        if(this.filterCriteria.type.length > 0 || this.filterCriteria.status.length > 0){
+            const query = this.pickSelectedFilterCriterias(this.filterCriteria);       
+            this.filteredList = [];
+            this.filteredList = this.groupByStatus(this.tickets, query);
+            this.updateUserIcon();  
+            this.getCountByGroup();    
+        }else{
+            this.filteredList = [];
+        }    
     }
    
 }
