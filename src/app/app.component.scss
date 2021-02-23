@@ -1,0 +1,49 @@
+ul.list-holder {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+ul.list-holder li {
+    padding: 10px;
+    margin: 5px;
+    border-bottom: 1px solid gray;
+}
+
+ul.list-holder li p {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
+.active {
+    background-color: green!important;
+}
+
+ul.list-holder li span.bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;    
+    background: gray;
+    display: inline-block;
+}
+
+ul.list-holder li span.bullet.notstarted {
+    background: red;
+}
+
+ul.list-holder li span.bullet.inprogress {
+    background: blue;
+}
+
+ul.list-holder li span.bullet.completed {
+    background: green;
+}
+
+#status option.selected {
+    background: red;
+}
+
+.dropdown {
+    float: right;
+}
