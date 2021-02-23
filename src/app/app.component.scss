@@ -1,7 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.container {
+    padding: 10px;
+    background-color: #eee;
+}
+
+.user-group {
+    font-size: 30px;
+    padding: 25px 15px;
+    background-color: #fff;
+}
+
+.user.green {
+    color: green;
+}
+
+.fascet-container {
+    background: #ddd;
+}
+
+.fascet-container h2 {
+    padding: 15px 25px;
+}
+
+.fascet-container h3 {
+    padding: 15px;
+}
+
+.left-block {
+    width: 10%;
+    float: left;
+    margin-right: 3px;
+    background: #fff;
+}
+
+.right-block {
+    width: 89%;
+    padding: 15px;
+    float: right;
+    background-color: #fff;
+}
+
+.right-block h4 {
+    padding: 10px 10px 25px 10px;
+    border-bottom: 1px solid #999;
+}
+
 ul.list-holder {
     padding: 0;
     margin: 0;
+    height: 600px;
     list-style-type: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 ul.list-holder li {
@@ -17,7 +75,8 @@ ul.list-holder li p {
 }
 
 .active {
-    background-color: green!important;
+    color: #fff;
+    background-color: gray!important;
 }
 
 ul.list-holder li span.bullet {
@@ -44,6 +103,6 @@ ul.list-holder li span.bullet.completed {
     background: red;
 }
 
-.dropdown {
+.form-select {
     float: right;
 }

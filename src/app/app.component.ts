@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
     filteredList: any = [];
     filterCriteria: any = {
         type: [],
-        status: [3]
+        status: []
     };
 
     tasks = 0;
