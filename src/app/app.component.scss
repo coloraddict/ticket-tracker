@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+hr {
+    margin: 0;
+    margin-top:5px;
+}
+
 .btn:focus {
     outline: 0;
     box-shadow: none;
@@ -66,6 +71,7 @@ ul.list-holder li {
     padding: 10px;
     margin: 5px;
     border-bottom: 1px solid gray;
+    position: relative;
 }
 
 ul.list-holder li p {
@@ -75,8 +81,9 @@ ul.list-holder li p {
 }
 
 .active {
-    color: #fff;
-    background-color: gray!important;
+    color: blue;
+    background-color: #eee!important;
+    text-decoration: underline;
 }
 
 ul.list-holder li span.bullet {
@@ -85,6 +92,10 @@ ul.list-holder li span.bullet {
     border-radius: 2px;    
     background: gray;
     display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -6px;
 }
 
 ul.list-holder li span.bullet.notstarted {
@@ -99,10 +110,44 @@ ul.list-holder li span.bullet.completed {
     background: green;
 }
 
+button.btn-full {
+    width: 100%;
+}
+
 #status option.selected {
     background: red;
 }
 
 .form-select {
     float: right;
+}
+
+.filter-btns {
+    display: flex;
+}
+
+.filter-btns .item {
+    order: 5;
+    flex-grow: 4; 
+}
+
+
+@media screen and (max-width: 1200px) {
+    ul.list-holder li p {
+        width: 70%;
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    button.btn {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    ul.list-holder li p {
+        width: 50%;
+    }
 }

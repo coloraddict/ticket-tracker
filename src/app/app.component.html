@@ -3,34 +3,43 @@
         <div class="col-md-12">
             <div class="fascet-container">
                 <h2>FASCET</h2>
-                <!-- <div class="row"> -->
-                    <div class="left-block text-center">
-                        <i class="fa fa-users user-group" aria-hidden="true"></i>
-                    </div>
-                    <div class="right-block">
-                        <h4><i class="fa fa-user user green" aria-hidden="true"></i>&nbsp;User 1</h4>
-                        <div class="content">
-                            <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-default" name="Task" state="0" (click)="onClick($event)" [ngClass]="filterCriteria.type.indexOf(1)!=-1?'active':''">Tasks</button>
-                                <button type="button" class="btn btn-default" name="Bug" state="0" (click)="onClick($event)" [ngClass]="filterCriteria.type.indexOf(2)!=-1?'active':''">Bugs</button>
-                                <button type="button" class="btn btn-default" name="Completed" state="0" (click)="onClick($event)" [ngClass]="filterCriteria.status.indexOf(1)!=-1?'active':''">Completed</button>
-                                <button type="button" class="btn btn-default" name="InProgress" state="0" (click)="onClick($event)" [ngClass]="filterCriteria.status.indexOf(2)!=-1?'active':''">In Progress</button>
-                                <button type="button" class="btn btn-default" name="NotStarted" state="0" (click)="onClick($event)" [ngClass]="filterCriteria.status.indexOf(3)!=-1?'active':''">Not Started</button>
+                <div class="left-block text-center">
+                    <i class="fa fa-users user-group" aria-hidden="true"></i>
+                </div>
+                <div class="right-block">
+                    <h4><i class="fa fa-user user green" aria-hidden="true"></i>&nbsp;User 1</h4>
+                    <div class="content">
+                        <div class="filter-btns">
+                            <div class="item text-center" [ngClass]="filterCriteria.type.indexOf(1)!=-1?'active':''">
+                                <button type="button" class="btn btn-default btn-full" name="Task" state="0" (click)="onClick($event)">Tasks</button>      
                             </div>
-                            <hr>
-                            <ul class="list-holder">
-                                <li *ngFor="let ticket of filteredList; let i = index">
-                                    <span class="bullet" [ngClass]="ticket.status===1 ? 'completed' : ticket.status===2 ? 'inprogress': ticket.status===3 ? 'notstarted':''"></span>
-                                    <p>{{ ticket.description }}</p>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option value="1" [attr.selected]="ticket.status===1?'selected':''">Completed</option>
-                                        <option value="2" [attr.selected]="ticket.status===2?'selected':''">In Progress</option>
-                                        <option value="3" [attr.selected]="ticket.status===3?'selected':''">Not Started</option>
-                                    </select>
-                                </li>
-                            </ul>
+                            <div class="item text-center" [ngClass]="filterCriteria.type.indexOf(2)!=-1?'active':''">
+                                <button type="button" class="btn btn-default btn-full" name="Bug" state="0" (click)="onClick($event)">Bugs</button>
+                            </div>
+                            <div class="item text-center" [ngClass]="filterCriteria.status.indexOf(1)!=-1?'active':''">
+                                <button type="button" class="btn btn-default btn-full" name="Completed" state="0" (click)="onClick($event)">Completed</button>
+                            </div>
+                            <div class="item text-center" [ngClass]="filterCriteria.status.indexOf(2)!=-1?'active':''">
+                                <button type="button" class="btn btn-default btn-full" name="InProgress" state="0" (click)="onClick($event)">In Progress</button>
+                            </div>
+                            <div class="item text-center" [ngClass]="filterCriteria.status.indexOf(3)!=-1?'active':''">
+                                <button type="button" class="btn btn-default btn-full" name="NotStarted" state="0" (click)="onClick($event)">Not Started</button>
+                            </div>
                         </div>
+                        <hr>
+                        <ul class="list-holder">
+                            <li *ngFor="let ticket of filteredList; let i = index">
+                                <span class="bullet" [ngClass]="ticket.status===1 ? 'completed' : ticket.status===2 ? 'inprogress': ticket.status===3 ? 'notstarted':''"></span>
+                                <p>{{ ticket.description }}</p>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option value="1" [attr.selected]="ticket.status===1?'selected':''">Completed</option>
+                                    <option value="2" [attr.selected]="ticket.status===2?'selected':''">In Progress</option>
+                                    <option value="3" [attr.selected]="ticket.status===3?'selected':''">Not Started</option>
+                                </select>
+                            </li>
+                        </ul>
                     </div>
+                </div>
             </div>
         </div>
     </div>
