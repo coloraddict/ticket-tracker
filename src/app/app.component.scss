@@ -12,9 +12,18 @@ hr {
     box-shadow: none;
 }
 
+.clear-fix {
+    float: none;
+    clear: both;
+}
+
 .container {
     padding: 10px;
     background-color: #eee;
+}
+
+.block-holder {
+    background-color: #ddd;
 }
 
 .user-group {
@@ -25,6 +34,33 @@ hr {
 
 .user.green {
     color: green;
+}
+
+.user.blue {
+    color: blue;
+}
+
+.user.red {
+    color: red;
+}
+
+.user.gray {
+    color: gray;
+}
+
+.bg-green {
+    color: #fff;
+    background-color:green;
+}
+
+.bg-blue {
+    color: #fff;
+    background-color:blue;
+}
+
+.bg-red {
+    color: #fff;
+    background-color:red;
 }
 
 .fascet-container {
@@ -80,7 +116,13 @@ ul.list-holder li p {
     margin-left: 10px;
 }
 
-.active {
+div.active {
+    color: blue;
+    background-color: #eee!important;
+    text-decoration: underline;
+}
+
+div.active button {
     color: blue;
     background-color: #eee!important;
     text-decoration: underline;
@@ -95,7 +137,7 @@ ul.list-holder li span.bullet {
     position: absolute;
     top: 50%;
     left: 0;
-    margin-top: -6px;
+    margin-top: -5px;
 }
 
 ul.list-holder li span.bullet.notstarted {
@@ -119,7 +161,11 @@ button.btn-full {
 }
 
 .form-select {
-    float: right;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 2px;
+    right: 10px;
 }
 
 .filter-btns {
@@ -134,8 +180,8 @@ button.btn-full {
 
 @media screen and (max-width: 1200px) {
     ul.list-holder li p {
-        width: 70%;
-        font-size: 12px;
+        width: 80%;
+        font-size: 13px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -146,7 +192,25 @@ button.btn-full {
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
+    .user-group {
+        font-size: 20px;
+    }
+
+    .user {
+        font-size: 20px;
+    }
+
+    h4 span {
+        font-size: 18px;
+    }
+
+    .form-select {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 990px) {
     ul.list-holder li p {
         width: 50%;
     }
